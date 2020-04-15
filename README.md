@@ -9,9 +9,9 @@
 
 ## 🖥️ User Interface
 ### Design
-![Capture](https://user-images.githubusercontent.com/29998991/79338687-08b94380-7f28-11ea-8382-e47852387ac2.PNG)
+![Capture](https://user-images.githubusercontent.com/29998991/79338687-08b94380-7f28-11ea-8382-e47852387ac2.PNG)  
 *(1. VST Design)*
 
 ## Contributors 👥
-Code: Krešimir Ćurić (kcuric)
+Code: Krešimir Ćurić (kcuric)  
 Background image: Karlo Bonetić (kbonetic)
