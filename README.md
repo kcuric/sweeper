@@ -23,6 +23,10 @@
 8. Copy the Sweeper.vst3 to your VST3 directory.
 9. Enjoy the sweeping/filtering/autowah madness! :)
 
+or
+
+*DOWNLOAD THE ALREADY BUILT VERSION HERE*: https://mega.nz/file/P0slwQiA#1tZtJKpjx1kNSxt6F_XOT2wFsm-oBwm76u0rnftlJgo :)
+
 ## Contributors 👥
 Code: Krešimir Ćurić (kcuric)  
 Background image: Karlo Bonetić (kbonetic)
