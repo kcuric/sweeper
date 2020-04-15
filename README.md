@@ -25,7 +25,8 @@
 
 or
 
-*DOWNLOAD THE ALREADY BUILT VERSION HERE*: https://mega.nz/file/P0slwQiA#1tZtJKpjx1kNSxt6F_XOT2wFsm-oBwm76u0rnftlJgo :)
+*DOWNLOAD THE ALREADY BUILT VERSION HERE*:  
+https://mega.nz/file/P0slwQiA#1tZtJKpjx1kNSxt6F_XOT2wFsm-oBwm76u0rnftlJgo :)
 
 ## Contributors 👥
 Code: Krešimir Ćurić (kcuric)  
