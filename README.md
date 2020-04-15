@@ -9,7 +9,7 @@
 
 ## 🖥️ User Interface
 ### Design
-![Capture](https://user-images.githubusercontent.com/29998991/79338687-08b94380-7f28-11ea-8382-e47852387ac2.PNG)  
+![Capture](https://user-images.githubusercontent.com/29998991/79339962-f6400980-7f29-11ea-97a9-bc1230c9ad73.PNG)  
 *(1. VST Design)*
 
 ## Contributors 👥
