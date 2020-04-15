@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="CAE6Br" name="Boomer" projectType="audioplug" jucerVersion="5.4.7"
-              companyName="Bukinov" pluginFormats="buildVST3" pluginChannelConfigs="{1,1},{2,2}">
-  <MAINGROUP id="z0JokA" name="Boomer">
+<JUCERPROJECT id="CAE6Br" name="Sweeper" projectType="audioplug" jucerVersion="5.4.7"
+              companyName="kcuric" pluginFormats="buildVST3" pluginChannelConfigs="{1,1},{2,2}">
+  <MAINGROUP id="z0JokA" name="Sweeper">
     <GROUP id="{F4BFB6D1-B898-A53F-C665-35D46D1EE84D}" name="Source">
       <FILE id="sv3PTr" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
@@ -21,7 +21,7 @@
         <CONFIGURATION isDebug="1" name="Debug"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
-        <MODULEPATH id="juce_audio_basics" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../JUCE/modules"/>
         <MODULEPATH id="juce_audio_devices" path="../../JUCE/modules"/>
         <MODULEPATH id="juce_audio_formats" path="../../JUCE/modules"/>
         <MODULEPATH id="juce_audio_plugin_client" path="../../JUCE/modules"/>
@@ -34,7 +34,7 @@
         <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
         <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
-        <MODULEPATH id="juce_opengl" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="..\JUCE\modules"/>
         <MODULEPATH id="juce_dsp" path="../../JUCE/modules"/>
       </MODULEPATHS>
     </VS2019>

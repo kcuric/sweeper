@@ -40,8 +40,6 @@ BoomerAudioProcessor::BoomerAudioProcessor()
 
     state->createAndAddParameter("VolumeAttachment", "Volume", "Volume", NormalisableRange<float>(0.f, 1.f, 0.01f), 0.f, nullptr, nullptr);
     state->state = ValueTree("Volume");
-    
-
 }
 
 BoomerAudioProcessor::~BoomerAudioProcessor()
@@ -111,10 +109,6 @@ void BoomerAudioProcessor::changeProgramName (int index, const String& newName)
 }
 
 //==============================================================================
-double lastSampleRate;
-double freq;
-bool direction; // true = up, false = down
-double hostTempo;
 
 void BoomerAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
@@ -212,12 +206,6 @@ void BoomerAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer&
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
-    // In case we have more outputs than inputs, this code clears any output
-    // channels that didn't contain input data, (because these aren't
-    // guaranteed to be empty - they may contain garbage).
-    // This is here to avoid people getting screaming feedback
-    // when they first compile a plugin, but obviously you don't need to keep
-    // this code if your algorithm always overwrites all the output channels.
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
@@ -225,7 +213,7 @@ void BoomerAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer&
     float volume = *state->getRawParameterValue("VolumeAttachment");
 
     AudioSampleBuffer drybuffer;
-    drybuffer.makeCopyOf(buffer, true);
+    drybuffer.makeCopyOf(buffer, true); // this ain't so smart :)
 
     dsp::AudioBlock<float> dryBlock(drybuffer);
     dryBlock.multiplyBy(1 - dryWet);
@@ -237,25 +225,6 @@ void BoomerAudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer&
 
     wetBlock.add(dryBlock);
     wetBlock.multiplyBy(volume);
-
-    
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
-    /*
-    float boom = *state->getRawParameterValue("BoomAttachment");
-
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
-    {
-        float* channelData = buffer.getWritePointer (channel);
-        for (int sample = 0; sample < buffer.getNumSamples(); sample++) {
-            channelData++;
-        }
-    }
-    */
 }
 
 AudioProcessorValueTreeState& BoomerAudioProcessor::getState() {

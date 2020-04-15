@@ -13,10 +13,10 @@ BEGIN
   BEGIN
     BLOCK "040904E4"
     BEGIN
-      VALUE "CompanyName",  "Bukinov\0"
-      VALUE "FileDescription",  "Boomer\0"
+      VALUE "CompanyName",  "kcuric\0"
+      VALUE "FileDescription",  "Sweeper\0"
       VALUE "FileVersion",  "1.0.0\0"
-      VALUE "ProductName",  "Boomer\0"
+      VALUE "ProductName",  "Sweeper\0"
       VALUE "ProductVersion",  "1.0.0\0"
     END
   END

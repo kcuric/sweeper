@@ -29,20 +29,14 @@ public:
         float ry = centerY - radius;
         float angle = rotaryStartAngle + (sliderPos * (rotaryEndAngle - rotaryStartAngle));
 
-
         Rectangle<float> dialArea(x, y, diameter, diameter);
-        
-        //g.setColour(Colours::slategrey);
-        //g.fillEllipse(dialArea);
 
         // Tick
 
         Path dialTick;
         dialTick.addRectangle(0, -radius, 2.0, radius * 0.4);
-        g.setColour(Colours::black);
+        g.setColour(Colours::whitesmoke);
         g.fillPath(dialTick, AffineTransform::rotation(angle).translated(centerX, centerY));
-
-        g.drawEllipse(rx, ry, diameter, diameter, 2.0f);
     }
     
 };

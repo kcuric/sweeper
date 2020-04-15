@@ -52,6 +52,7 @@ BoomerAudioProcessorEditor::BoomerAudioProcessorEditor (BoomerAudioProcessor& p)
     volumeAttachment = new AudioProcessorValueTreeState::SliderAttachment(p.getState(), "VolumeAttachment", *volumeKnob);
 
     addAndMakeVisible(labelOne = new Label("LabelOne", JucePlugin_VersionString));
+    labelOne->setColour(1, Colours::whitesmoke);
 
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
@@ -87,10 +88,10 @@ void BoomerAudioProcessorEditor::resized()
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
 
-    speedKnob->setBounds(getWidth() / 2 - 75, getHeight() / 2 - 75, 150, 150);
-    highFreqKnob->setBounds(getWidth() / 2 + 100, getHeight() / 2 - 50, 100, 100);
-    lowFreqKnob->setBounds(getWidth() / 2 - 200, getHeight() / 2 - 50, 100, 100);
-    mixKnob->setBounds(getWidth() / 2 - 100, getHeight() / 2 - 125, 50, 50);
-    volumeKnob->setBounds(getWidth() / 2 + 50, getHeight() / 2 - 125, 50, 50);
+    speedKnob->setBounds(getWidth() / 2 - 75, getHeight() / 2 - 60, 150, 150);
+    highFreqKnob->setBounds(getWidth() / 2 + 100, getHeight() / 2 - 30, 100, 100);
+    lowFreqKnob->setBounds(getWidth() / 2 - 200, getHeight() / 2 - 30, 100, 100);
+    mixKnob->setBounds(getWidth() / 2 - 103, getHeight() / 2 - 110, 50, 50);
+    volumeKnob->setBounds(getWidth() / 2 + 47, getHeight() / 2 - 110, 50, 50);
     labelOne->setBounds(0, 0, 100, 15);
 }

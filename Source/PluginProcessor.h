@@ -63,6 +63,11 @@ public:
 
 private:
 
+    double lastSampleRate;
+    double freq;
+    bool direction; // true = up, false = down
+    double hostTempo;
+
     dsp::ProcessorDuplicator<dsp::StateVariableFilter::Filter<float>, dsp::StateVariableFilter::Parameters<float>> stateVariableFilter;
 
     ScopedPointer<AudioProcessorValueTreeState> state;
